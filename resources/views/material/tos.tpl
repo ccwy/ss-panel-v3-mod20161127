@@ -11,7 +11,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 col-lg-push-0 col-sm-12 col-sm-push-0">
-						<h1 class="content-heading">服务条款</h1>
+						<h1 class="content-heading">服务条款(TOS)</h1>
 					</div>
 				</div>
 			</div>
@@ -83,8 +83,9 @@
 										
 											<p>
 												<ul>
-													<li>本站仅限人类及猫注册使用。</li>
+													
 													<li>TOS更新时用户需要遵守最新TOS。</li>
+													<li>以上服务条款最终解释权归本站所有。</li>
 											   </ul>
 											</p>
 									</div>
