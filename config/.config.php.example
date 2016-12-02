@@ -1,5 +1,12 @@
 <?php
 
+
+if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) 
+{
+$list = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
+$_SERVER['REMOTE_ADDR'] = $list[0];
+}
+
 //  ss-panel v3 配置
 //
 // !!! 修改此key为随机字符串确保网站安全 !!!
