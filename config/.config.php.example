@@ -1,11 +1,7 @@
 <?php
 
-
-if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) 
-{
-$list = explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
-$_SERVER['REMOTE_ADDR'] = $list[0];
-}
+if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) 
+$_SERVER['REMOTE_ADDR'] = $_SERVER['HTTP_CF_CONNECTING_IP'];
 
 //  ss-panel v3 配置
 //
