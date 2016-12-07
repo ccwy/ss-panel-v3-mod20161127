@@ -170,8 +170,8 @@
 								<div class="card-inner">
 									<div class="card-inner">
 										<p class="card-heading">SSR 协议&混淆设置</p>
-										<p>当前协议：{$user->protocol}</p>
-										<p>注意：如果需要兼容原版SS请选择带_compatible的兼容选项！</p>
+										<font color="red"><p>当前协议：{$user->protocol}</p>
+										<p>注意：如果需要兼容原版SS请选择带_compatible的兼容选项！</p></font>
 										<div class="form-group form-group-label">
 											<label class="floating-label" for="protocol">协议</label>
 											<select id="protocol" class="form-control">
@@ -196,8 +196,8 @@
 									</div>
 
 									<div class="card-inner">
-										<p>当前混淆方式：{$user->obfs}</p>
-										<p>注意：如果需要兼容原版SS请选择带_compatible的兼容选项！</p>
+										<font color="red"><p>当前混淆方式：{$user->obfs}</p>
+										<p>注意：如果需要兼容原版SS请选择带_compatible的兼容选项！</p></font>
 										<div class="form-group form-group-label">
 											<label class="floating-label" for="obfs">混淆方式</label>
 											<select id="obfs" class="form-control">
