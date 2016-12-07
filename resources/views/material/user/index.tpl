@@ -12,6 +12,7 @@
 
 
 
+
 	<main class="content">
 		<div class="content-header ui-content-header">
 			<div class="container">
@@ -27,8 +28,9 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">系统中最新公告</p>
-										
+										<h5><font color="red">置顶公告：云霄阁2号站高级VIP会员用户可联系管理员申请开通云霄阁1号站无限流量使用优惠，无限流量有效期与高级VIP会员有效期相同，无限流量期间只要不下载BT，随便玩。</font></h5>
+					
+				
 										{if $ann != null}
 										<p>{$ann->content}</p>
 										{/if}
@@ -44,9 +46,15 @@
 										<p>这里为您提供了自动化地配置文件生成，包含了所有 Shadowsocks 服务器的信息，方便您在诸多的服务器中快速添加，快速切换。</p>
 										<p><a href="/downloads/client/ShadowsocksR-3.9.6.2e-win.7z"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows 下载这个</a>（版本：3.9.6.2），解压，然后下载<a href="/user/getpcconf">这个</a>，放到程序目录下，运行程序，选择一个合适的服务器，更新一下PAC为绕过国内IP，然后开启系统代理即可上网。</p>
 										<p><a href="https://github.com/qinyuhang/ShadowsocksX-NG/releases"><i class="icon icon-lg">laptop_mac</i>&nbsp;Mac OS X下载这个</a>，安装，然后下载<a href="/user/getpcconf">这个</a>，运行程序，小飞机上右键 服务器列表 子菜单 的 “导入服务器配置文件...” 导入这个文件，然后选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>
-										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 推荐下载<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue"></font></p>
+										
+										{if $user->class>=1}
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 请到App Store商店下载shadowrocket（小火箭）安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue">（推荐这种方法）</font></p>										
+										{else}
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 请到App Store商店下载shadowrocket（小火箭）安装，然后在Safari浏览器中点击 <a id="android_add" href="{$android_add}">一键添加节点</a> ，然后点击打开，批量添加完服务器，点击连接就可以上网了。<font color="blue">（推荐这种方法）</font></p>
+										{/if}
+										
 										<STRIKE><p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 下载<a href="/link/{$ios_token}">这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p></STRIKE>
-										<p><a href="/downloads/client/ssr_3.2.7.8.apk"><i class="icon icon-lg">android</i>&nbsp;Android下载这个</a>（版本：3.2.7.8）安装，然后在手机上默认浏览器中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。</p>
+										<p><a href="/downloads/client/ssr_3.2.7.8.apk"><i class="icon icon-lg">android</i>&nbsp;Android下载这个</a>（最新版本：3.2.7.8）安装，然后在手机上默认浏览器中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。</p>
 									</div>
 									
 								</div>
@@ -102,6 +110,9 @@
 											<dt>等级：<font color="blue">钻石VIP会员</font></dt>
 											{/if}
 											
+											{if $user->class==9}
+											<dt>等级：<font color="blue">云霄阁2号高级VIP无限流量会员</font></dt>
+											{/if}
 											
 											{if $user->class==99}
 											<dt>等级：<font color="blue">超级管理员</font></dt>
@@ -192,15 +203,17 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">签到获取流量</p>
+										<p class="card-heading">签到获取流量，签不签到没啥意义。。。</p>
+										
+										    <p>本站不需要你经常签到，只管使劲用就行，所以签不签到没啥意义。。。</p>
+											
 											<p>流量不会重置，可以通过签到获取流量。</p>
-
-										
-										
-																						
+											
+											<p>每天可以签到一次。您可以点击按钮或者摇动手机来签到。</p>
+											
 											<p>上次使用时间：<code>{$user->lastSsTime()}</code></p>
 
-											<p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
+											
 											
 											<p id="checkin-msg"></p>
 											
@@ -237,7 +250,7 @@
 												
 												<dt>混淆协议：{$user->protocol}</dt>
 												
-												<dt>协议参数：{$user->protocol_param}</dt>
+												
 												
 												<dt>混淆方式：{$user->obfs}</dt>
 												
