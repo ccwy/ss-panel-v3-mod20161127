@@ -75,8 +75,25 @@
 																			
 																			
 																			{if $node->sort > 2 && $node->sort != 5}
-																				<p>地址：<span class="label" > 
-																				<a href="javascript:void(0);" onClick="urlChange('{$node->id}',0)">请点这里进入查看详细信息</a>
+																				<p>地址：<span class="label label-brand-accent"> 
+									                                        	M04日本5、M10新加坡节点	、M12美国节点														
+									                                        	</span></p>
+																					
+									                                        	<p>端口：<span class="label label-brand-red"> 
+										                                        {$node->status}
+										                                        </span></p>
+																					
+										                                        <p>加密方式：<span class="label label-brand"> 
+										                                        aes-256-cfb
+										                                        </span></p>
+																					
+										                                        <p>协议：<span class="label label-red">  
+										                                        auth_sha1_compatible
+										                                        </span></p>
+																					
+										                                        <p>混淆方式：<span class="label label-orange"> 
+										                                        http_simple_compatible
+										                                        </span></p>	
 																			{else}
 																				<p>地址：<span class="label label-brand-accent"> 
 																				{$node->server}
@@ -248,7 +265,7 @@
 							</div>
 						</div>
 						
-						<div aria-hidden="true" class="modal fade" id="nodeinfo" role="dialog" tabindex="-1">
+						<div aria-hidden="true" class="modal modal-va-middle fade" id="nodeinfo" role="dialog" tabindex="-1">
 							<div class="modal-dialog modal-full">
 								<div class="modal-content">
 									<iframe class="iframe-seamless" title="Modal with iFrame" id="infoifram"></iframe>
