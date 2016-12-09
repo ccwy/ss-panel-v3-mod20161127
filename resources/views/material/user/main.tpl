@@ -12,7 +12,7 @@
 	<!-- css -->
 	<link href="/theme/material/css/base.min.css" rel="stylesheet">
 	<link href="/theme/material/css/project.min.css" rel="stylesheet">
-	<link href="https://fonts.lug.ustc.edu.cn/icon?family=Material+Icons" rel="stylesheet">
+	<link href="//fonts.lug.ustc.edu.cn/icon?family=Material+Icons" rel="stylesheet">
 	
 
 	
@@ -314,7 +314,6 @@
 						</ul>
 						
 						
-
 						
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_help">交易</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_help">
@@ -331,11 +330,7 @@
 							
 
 
-							<li>
-								<a href="/user/code">
-									<i class="icon icon-lg">code</i>&nbsp;充值
-								</a>
-							</li>
+							
 						</ul>
 						
 						{if $user->isAdmin()}
