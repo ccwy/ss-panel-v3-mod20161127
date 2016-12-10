@@ -54,7 +54,7 @@
 										{/if}
 										
 										<STRIKE><p><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS 下载<a href="/link/{$ios_token}">这个</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p></STRIKE>
-										<p><a href="/downloads/client/ssr_3.2.7.8.apk"><i class="icon icon-lg">android</i>&nbsp;Android下载这个</a>（最新版本：3.2.7.8）安装，然后在手机上默认浏览器中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。</p>
+										<p><a href="/downloads/client/shadowsocksr-release-V3.3.1.apk"><i class="icon icon-lg">android</i>&nbsp;Android下载这个</a>（版本：V3.3.1）安装，然后在手机上默认浏览器中点击<a id="android_add" href="{$android_add}">这个</a>，然后点击确定，批量添加完服务器，然后路由选择绕过大陆，右上角开启就可以上网了。</p>
 									</div>
 									
 								</div>
