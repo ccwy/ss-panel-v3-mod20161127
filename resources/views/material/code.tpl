@@ -25,7 +25,7 @@
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
-								<p>{$config["appName"]} 的邀请码，没了的话就烧纸吧。</p>
+								<p>{$config["appName"]} 的邀请码，没了的话的邀请码，没了的话可到 <a href="https://telegram.me/joinchat/DxgnSkAl5GiMtIUEfutZ0w" target="_blank">云霄阁TG群</a> 获取。</p>
 							</div>
 						</div>
 					</div>
