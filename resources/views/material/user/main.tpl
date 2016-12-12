@@ -314,15 +314,22 @@
 						
 						<li>
 								<a href="/tos">
-									<i class="icon icon-lg">router</i>&nbsp;节点不可见
+									<i class="icon icon-lg">router</i>&nbsp;账户被禁用
 								</a>
 							</li>
 							
 						<li>
 								<a href="/tos">
-								<i class="icon icon-lg">traffic</i>&nbsp;你违反了TOS
+								<i class="icon icon-lg">traffic</i>&nbsp;你看不到节点
 								</a>
 							</li>
+							
+							<li>
+								<a href="/tos">
+									<i class="icon icon-lg">youtube_searched_for</i>&nbsp;违反服务条款TOS
+								</a>
+							</li>
+							
 						</ul>	
 						{/if}
 
