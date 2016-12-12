@@ -283,9 +283,10 @@
 							
 						</ul>
 						
-						
+						{if $user->enable==1}					
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">使用</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_use">
+						
 							<li>
 								<a href="/user/node">
 									<i class="icon icon-lg">router</i>&nbsp;节点列表
@@ -306,7 +307,26 @@
 								</a>
 							</li>
 						</ul>
+						
+						{else}												
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">节点不可见</a>
+						<ul class="menu-collapse collapse in" id="ui_menu_use">
+						
+						<li>
+								<a href="/tos">
+									<i class="icon icon-lg">router</i>&nbsp;节点不可见
+								</a>
+							</li>
+							
+						<li>
+								<a href="/tos">
+								<i class="icon icon-lg">traffic</i>&nbsp;你违反了TOS
+								</a>
+							</li>
+						</ul>	
+						{/if}
 
+						
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_detect">
 							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
@@ -319,12 +339,6 @@
 						<ul class="menu-collapse collapse in" id="ui_menu_help">
 						
 						
-							<li>
-								<a href="/user/shop">
-									<i class="icon icon-lg">shop</i>&nbsp;商店
-								</a>
-							</li>
-							
 							<li><a href="/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li>
 							
 							
