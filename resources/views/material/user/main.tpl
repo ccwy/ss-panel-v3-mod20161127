@@ -283,18 +283,21 @@
 							
 						</ul>
 						
-						{if $user->enable==1}					
-						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">使用</a>
+										
+						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">节点列表</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_use">
 						
 							<li>
 								<a href="/user/node">
-									<i class="icon icon-lg">router</i>&nbsp;节点列表
+									<i class="icon icon-lg">router</i>&nbsp;免费节点
 								</a>
 							</li>
 
-							
-
+							<li>
+								<a href="https://www.yunxiaoge.win/user/node" target="_blank">
+									<font color="red"><i class="icon icon-lg">router</i>&nbsp;2站付费节点</font>
+								</a>
+							</li>
 							<li>
 								<a href="/user/trafficlog">
 									<i class="icon icon-lg">traffic</i>&nbsp;流量记录
@@ -308,30 +311,7 @@
 							</li>
 						</ul>
 						
-						{else}												
-						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">节点不可见</a>
-						<ul class="menu-collapse collapse in" id="ui_menu_use">
 						
-						<li>
-								<a href="/tos">
-									<i class="icon icon-lg">router</i>&nbsp;账户被禁用
-								</a>
-							</li>
-							
-						<li>
-								<a href="/tos">
-								<i class="icon icon-lg">traffic</i>&nbsp;你看不到节点
-								</a>
-							</li>
-							
-							<li>
-								<a href="/tos">
-									<i class="icon icon-lg">youtube_searched_for</i>&nbsp;违反服务条款TOS
-								</a>
-							</li>
-							
-						</ul>	
-						{/if}
 
 						
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
